@@ -1,4 +1,5 @@
 import React from "react";
+import "./app.css"; // <-- Import your CSS file here
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
@@ -19,7 +20,7 @@ const Profile = () => {
       {/* --- HEADER --- */}
       <header className="cv-header">
         <h1>Seth Andrey Jabagat</h1>
-        <p className="subtitle">Computer Technology Student | Aspiring Software Developer</p>
+        <p className="subtitle">Junior Full-Stack Developer | UI/UX Enthusiast</p>
         <div className="contact-links">
           <a href="mailto:sethandreyabrasad0@gmail.com">📧 sethandreyabrasad0@gmail.com</a>
           <a href="https://github.com/gsi78eywh">💻 github.com/gsi78eywh</a>
@@ -36,11 +37,13 @@ const Profile = () => {
       <section>
         <h2>About Me</h2>
         <p>
-          Computer Technology student specializing in Software Development with
-          experience building responsive websites using HTML, CSS, JavaScript,
-          and React basics. Passionate about UI/UX design and user-focused
-          interfaces. Quick learner and collaborative team player eager to contribute
-          to impactful web and design projects.
+          Hi, I'm Seth Andrey Jabagat — a Computer Technology student from Dalaguete, Cebu specializing in software development, UI/UX design, and responsive web solutions. I focus on building user‑centered applications, creating intuitive interfaces, and delivering impactful digital experiences.
+        </p>
+        <p>
+          Adaptable, detail‑oriented, and collaborative, I enjoy solving problems with creativity and technical clarity. My academic projects have strengthened my ability to design responsive systems, improve accessibility, and apply modern development practices in real‑world scenarios.
+        </p>
+        <p>
+          I am open to internships, freelance, and full‑time opportunities where I can contribute to innovative projects, expand my expertise, and support organizations in achieving their digital goals. Let's connect — I'd love to collaborate on your next initiative.
         </p>
       </section>
 
@@ -74,17 +77,26 @@ const Profile = () => {
         <div className="experience-item">
           <h3>Library Management System (School Project)</h3>
           <p className="date">Aug 2025 - Nov 2025</p>
-          <p>Developed a responsive, user-friendly online library system that improved accessibility for students. 70% of users reported easier access to resources.</p>
+          <p>
+            Developed a responsive, user-friendly online library system that improved accessibility
+            for students. 70% of users reported easier access to resources.
+          </p>
         </div>
         <div className="experience-item">
           <h3>Mini E-commerce Frontend (School Project)</h3>
           <p className="date">Sep 2025 - Nov 2025</p>
-          <p>Designed a simple online shopping interface with responsive design, product browsing, cart addition, and checkout functionality.</p>
+          <p>
+            Designed a simple online shopping interface with responsive design, product browsing,
+            cart addition, and checkout functionality.
+          </p>
         </div>
         <div className="experience-item">
           <h3>Kombat Console Games (School Project)</h3>
           <p className="date">Jul 2025 - Sep 2025</p>
-          <p>Developed a console-based combat game with character selection, turn-based battles, and health tracking, showcasing programming fundamentals.</p>
+          <p>
+            Developed a console-based combat game with character selection, turn-based battles, and
+            health tracking, showcasing programming fundamentals.
+          </p>
         </div>
       </section>
 
@@ -102,6 +114,11 @@ const Profile = () => {
           <p>Mantalongon National High School, Dalaguete, Cebu</p>
         </div>
       </section>
+
+      {/* --- FOOTER --- */}
+      <footer>
+        © 2026 Seth Andrey Jabagat • Built with React
+      </footer>
     </div>
   );
 };
