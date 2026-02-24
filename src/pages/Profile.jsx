@@ -1,170 +1,109 @@
-import React from 'react';
-import { Mail, Github, Globe } from 'lucide-react';
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub as FaGithubIcon } from "react-icons/fa";
+import React from "react";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava } from "react-icons/fa";
+import { SiMysql } from "react-icons/si";
 
 const skills = [
-  { name: 'HTML', icon: <FaHtml5 />, color: 'text-orange-500' },
-  { name: 'CSS', icon: <FaCss3Alt />, color: 'text-blue-500' },
-  { name: 'JavaScript', icon: <FaJs />, color: 'text-yellow-400' },
-  { name: 'React', icon: <FaReact />, color: 'text-cyan-400' },
-  { name: 'Git & GitHub', icon: <FaGithubIcon />, color: 'text-slate-800' },
-];
-
-const softSkills = [
-  'Problem Solving', 'Creativity', 'Critical Thinking'
+  { name: "HTML", icon: <FaHtml5 /> },
+  { name: "CSS", icon: <FaCss3Alt /> },
+  { name: "JavaScript", icon: <FaJs /> },
+  { name: "React", icon: <FaReact /> },
+  { name: "PHP", icon: <FaPhp /> },
+  { name: "MySQL", icon: <SiMysql /> },
+  { name: "Java", icon: <FaJava /> },
+  { name: "Git & GitHub", icon: <FaGithub /> },
 ];
 
 const Profile = () => {
   return (
-    <div className="min-h-screen bg-white text-slate-900 font-sans antialiased">
-      <main className="max-w-6xl mx-auto px-6 py-12 space-y-32">
-        
-        {/* --- ABOUT SECTION --- */}
-        <section id="about" className="grid md:grid-cols-2 gap-16 items-start">
-          <div className="rounded-3xl overflow-hidden shadow-2xl border-b-[10px] border-[--brand-pink]">
-             <img 
-              src="https://i.pinimg.com/736x/95/11/8b/95118b0e82f9c4b1e4029383db12ffa3.jpg" 
-              alt="Seth Andrey Jabagat" 
-              className="w-full h-auto object-cover aspect-[4/5]"
-            />
-          </div>
-          <div className="space-y-6 pt-4">
-            <h2 className="section-title text-[--brand-pink]">
-              About <span className="title-accent"></span>
-            </h2>
-            <h1 className="text-5xl font-black uppercase tracking-tighter leading-none">
-              Seth Andrey<br/> <span className="text-slate-300">Jabagat</span>
-            </h1>
-            <p className="text-slate-500 text-lg leading-relaxed">
-              Computer Technology student specializing in Software Development with
-              experience building responsive websites using HTML, CSS, JavaScript,
-              and React basics. Passionate about UI/UX design and user-focused
-              interfaces. Quick learner and collaborative team player eager to contribute
-              to impactful web and design projects.
-            </p>
-            
-            <div className="space-y-4 pt-4">
-              <ContactLink icon={<Mail size={18}/>} text="sethandreyabrasad0@gmail.com" />
-              <ContactLink icon={<Github size={18}/>} text="github.com/yourusername" />
-              <ContactLink icon={<Globe size={18}/>} text="Dalaguete, Cebu, Philippines" />
-            </div>
-
-            <button className="btn-brand mt-4">Download Resume</button>
-          </div>
-        </section>
-
-        {/* --- SKILLS & CERTIFICATIONS --- */}
-        <section id="skill">
-          <h2 className="section-title">
-            Expertise <span className="title-accent"></span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <div className="md:col-span-2">
-              <h3 className="bg-[--skill-highlight] border-l-4 border-[--skill-accent] px-4 py-2 font-black text-[10px] uppercase tracking-widest mb-6">Technical Stack</h3>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {skills.map((skill) => (
-                  <div key={skill.name} className="flex items-center gap-3 p-3 bg-slate-50 rounded-xl hover:bg-white hover:shadow-md transition-all border border-transparent hover:border-slate-100">
-                    <span className={skill.color}>{skill.icon}</span>
-                    <span className="text-xs font-bold uppercase tracking-tight">{skill.name}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            
-            <div>
-              <h3 className="bg-[--skill-highlight] border-l-4 border-[--skill-accent] px-4 py-2 font-black text-[10px] uppercase tracking-widest mb-6">Certifications</h3>
-              <div className="space-y-3">
-                <CertItem title="Skills to Succeed Academy" org="Accenture" />
-                <CertItem title="Google Data Analytics" org="Google" />
-                <CertItem title="Google Coursera Python Automation" org="Google" />
-                <CertItem title="Google UI/UX Training Module" org="Google" />
-                <CertItem title="Rapid Application Development" org="Alliance Software Solutions" />
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* --- BACKGROUND SECTION --- */}
-        <section id="background" className="grid md:grid-cols-2 gap-20">
-          <div>
-            <h2 className="section-title text-slate-800">Education <span className="title-accent"></span></h2>
-            <div className="space-y-0">
-              <TimelineItem 
-                date="2023 - 2026"
-                title="Associate in Computer Technology"
-                sub="University of San Jose - Recoletos"
-                desc="Major in Software Development. Focused on Software and Web development."
-              />
-              <TimelineItem 
-                date="2021 - 2023"
-                title="Senior High School"
-                sub="Mantalongon National High School"
-                desc="Completed secondary education in Mantalongon, Dalaguete, Cebu."
-              />
-            </div>
-          </div>
-
-          <div>
-            <h2 className="section-title text-slate-800">Experience <span className="title-accent"></span></h2>
-            <div className="space-y-0">
-              <TimelineItem 
-                date="Aug 2025 - Nov 2025"
-                title="Library Management System (School Project)"
-                sub="University Project"
-                desc="Developed a responsive, user-friendly online library system that improved accessibility for students. 70% of users reported easier access to resources."
-              />
-              <TimelineItem 
-                date="Sep 2025 - Nov 2025"
-                title="Mini E-commerce Frontend (School Project)"
-                sub="University Project"
-                desc="Designed a simple online shopping interface with responsive design, product browsing, cart addition, and checkout functionality."
-              />
-              <TimelineItem 
-                date="Jul 2025 - Sep 2025"
-                title="Kombat Console Games (School Project)"
-                sub="University Project"
-                desc="Developed a console-based combat game with character selection, turn-based battles, and health tracking, showcasing programming fundamentals."
-              />
-            </div>
-          </div>
-        </section>
-      </main>
-
-      <footer className="py-20 text-center border-t border-slate-50">
-        <div className="text-[10px] font-black uppercase tracking-[0.5em] text-slate-300">
-          © 2026 Seth Andrey Jabagat • Built with React
+    <div className="cv-container">
+      {/* --- HEADER --- */}
+      <header className="cv-header">
+        <h1>Seth Andrey Jabagat</h1>
+        <p className="subtitle">Computer Technology Student | Aspiring Software Developer</p>
+        <div className="contact-links">
+          <a href="mailto:sethandreyabrasad0@gmail.com">📧 sethandreyabrasad0@gmail.com</a>
+          <a href="https://github.com/gsi78eywh">💻 github.com/gsi78eywh</a>
+          <a href="#">📍 Dalaguete, Cebu, Philippines</a>
         </div>
-      </footer>
+        <div style={{ marginTop: "15px" }}>
+          <button className="tag">Schedule a Call</button>
+          <button className="tag">Send Email</button>
+          <button className="tag">Download CV</button>
+        </div>
+      </header>
+
+      {/* --- ABOUT --- */}
+      <section>
+        <h2>About Me</h2>
+        <p>
+          Computer Technology student specializing in Software Development with
+          experience building responsive websites using HTML, CSS, JavaScript,
+          and React basics. Passionate about UI/UX design and user-focused
+          interfaces. Quick learner and collaborative team player eager to contribute
+          to impactful web and design projects.
+        </p>
+      </section>
+
+      {/* --- SKILLS --- */}
+      <section>
+        <h2>Tech Stack</h2>
+        <div className="skills-tags">
+          {skills.map((skill) => (
+            <span key={skill.name} className="tag">
+              {skill.icon} {skill.name}
+            </span>
+          ))}
+        </div>
+      </section>
+
+      {/* --- CERTIFICATIONS --- */}
+      <section>
+        <h2>Certifications</h2>
+        <div className="skills-tags certs">
+          <span className="tag">Skills to Succeed Academy</span>
+          <span className="tag">Google Data Analytics</span>
+          <span className="tag">Google Coursera Python Automation</span>
+          <span className="tag">Google UI/UX Training Module</span>
+          <span className="tag">Rapid Application Development</span>
+        </div>
+      </section>
+
+      {/* --- EXPERIENCE --- */}
+      <section>
+        <h2>Experience</h2>
+        <div className="experience-item">
+          <h3>Library Management System (School Project)</h3>
+          <p className="date">Aug 2025 - Nov 2025</p>
+          <p>Developed a responsive, user-friendly online library system that improved accessibility for students. 70% of users reported easier access to resources.</p>
+        </div>
+        <div className="experience-item">
+          <h3>Mini E-commerce Frontend (School Project)</h3>
+          <p className="date">Sep 2025 - Nov 2025</p>
+          <p>Designed a simple online shopping interface with responsive design, product browsing, cart addition, and checkout functionality.</p>
+        </div>
+        <div className="experience-item">
+          <h3>Kombat Console Games (School Project)</h3>
+          <p className="date">Jul 2025 - Sep 2025</p>
+          <p>Developed a console-based combat game with character selection, turn-based battles, and health tracking, showcasing programming fundamentals.</p>
+        </div>
+      </section>
+
+      {/* --- EDUCATION --- */}
+      <section>
+        <h2>Education</h2>
+        <div className="education-item">
+          <h3>Associate in Computer Technology</h3>
+          <p className="date">2023 - 2026</p>
+          <p>University of San Jose - Recoletos</p>
+        </div>
+        <div className="education-item">
+          <h3>Senior High School</h3>
+          <p className="date">2021 - 2023</p>
+          <p>Mantalongon National High School, Dalaguete, Cebu</p>
+        </div>
+      </section>
     </div>
   );
 };
-
-/* --- SUB-COMPONENTS --- */
-
-const ContactLink = ({ icon, text }) => (
-  <div className="flex items-center gap-3 text-sm font-bold text-slate-600 hover:text-[--brand-pink] transition-colors cursor-pointer">
-    <span className="text-[--brand-pink]">{icon}</span>
-    {text}
-  </div>
-);
-
-const CertItem = ({ title, org }) => (
-  <div className="flex items-center justify-between p-2 border-b border-slate-100">
-    <span className="text-[10px] font-bold uppercase">{title}</span>
-    <span className="text-[9px] font-black text-slate-400 uppercase">{org}</span>
-  </div>
-);
-
-const TimelineItem = ({ date, title, sub, desc }) => (
-  <div className="relative pl-10 pb-12 border-l-2 border-slate-100 last:border-0 group">
-    <div className="absolute -left-[9px] top-1 w-4 h-4 rounded-full border-2 border-[--brand-pink] bg-white group-hover:bg-[--brand-pink] transition-colors duration-300"></div>
-    <div className="bg-slate-100 px-3 py-1 rounded text-[9px] font-black text-slate-400 uppercase inline-block mb-3 tracking-widest">
-      {date}
-    </div>
-    <h4 className="font-bold text-slate-900 text-lg leading-tight uppercase tracking-tighter">{title}</h4>
-    <p className="text-[--brand-pink] text-xs font-bold italic mt-1 uppercase">{sub}</p>
-    <p className="text-slate-500 text-sm mt-3 leading-relaxed">{desc}</p>
-  </div>
-);
 
 export default Profile;
