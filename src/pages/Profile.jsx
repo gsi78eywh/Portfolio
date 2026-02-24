@@ -1,4 +1,4 @@
-import React from "react";  
+import React from "react";
 import "../app.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
@@ -19,16 +19,36 @@ const Profile = () => {
     <div className="cv-container">
       {/* --- HEADER --- */}
       <header className="cv-header">
-        <h1>Seth Andrey Jabagat</h1>
-        <p className="subtitle">Junior Full-Stack Developer | UI/UX Enthusiast</p>
+        <div className="header-content">
+          <img
+            src="https://images7.alphacoders.com/101/1013669.jpg"
+            alt="Seth Andrey Jabagat"
+            className="profile-photo"
+          />
+          <div>
+            <h1>Seth Andrey Jabagat</h1>
+            <p className="subtitle">Junior Full-Stack Developer | UI/UX Enthusiast</p>
+          </div>
+        </div>
+
         <div className="contact-links">
           <a href="mailto:sethandreyabrasad0@gmail.com">📧 sethandreyabrasad0@gmail.com</a>
           <a href="https://github.com/gsi78eywh">💻 github.com/gsi78eywh</a>
           <a href="#">📍 Dalaguete, Cebu, Philippines</a>
         </div>
+
         <div style={{ marginTop: "15px" }}>
-          <button className="tag">Schedule a Call</button>
-          <button className="tag">Send Email</button>
+          <a
+            href="https://teams.microsoft.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="tag"
+          >
+            Schedule a Call
+          </a>
+          <a href="mailto:sethandreyabrasad0@gmail.com" className="tag">
+            Send Email
+          </a>
           <button className="tag">Download CV</button>
         </div>
       </header>
