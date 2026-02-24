@@ -1,5 +1,5 @@
-import React from "react";
-import "./app.css"; // <-- Import your CSS file here
+import React from "react";  
+import "../app.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava } from "react-icons/fa";
 import { SiMysql } from "react-icons/si";
 
