@@ -17,6 +17,7 @@
 
 
 /* Tools & Technologies Section */
+/* Tools & Technologies Section */
 .tools-tags {
   display: flex;
   flex-wrap: wrap;
@@ -38,12 +39,36 @@
   transition: all 0.2s ease;
 }
 
+/* Hover effect */
 .tools-tags .tag:hover {
   background: #eef6ff;
   border-color: #007acc;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
+
+/* Brand-specific colors */
+.tools-tags .tag.github {
+  background: #000;
+  color: #fff;
+}
+.tools-tags .tag.docker {
+  background: #0db7ed;
+  color: #fff;
+}
+.tools-tags .tag.npm {
+  background: #cb3837;
+  color: #fff;
+}
+.tools-tags .tag.vim {
+  background: #019833;
+  color: #fff;
+}
+.tools-tags .tag.copilot {
+  background: #6c8ef5;
+  color: #fff;
+}
+
 
 /* Header Section */
 .cv-header {

@@ -102,16 +102,17 @@ const Profile = () => {
       </section>
 
       {/* --- TOOLS --- */}
-      <section>
-        <h2>Tools & Technologies</h2>
-        <div className="tools-tags">
-          {tools.map((tool) => (
-            <span key={tool.name} className="tag">
-              {tool.icon} {tool.name}
-            </span>
-          ))}
-        </div>
-      </section>
+     <section>
+  <h2>Tools & Technologies</h2>
+  <div className="tools-tags">
+    {tools.map((tool) => (
+      <span key={tool.name} className={`tag ${tool.name.toLowerCase()}`}>
+        {tool.icon} {tool.name}
+      </span>
+    ))}
+  </div>
+</section>
+
 
       {/* --- CERTIFICATIONS --- */}
       <section>
