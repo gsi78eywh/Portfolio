@@ -285,3 +285,44 @@ section p {
   border-radius: 15px;
   font-size: 13px;
 }
+
+/* Education Section */
+.education-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.education-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.education-header h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007acc; /* highlight degree/program */
+  margin: 0;
+}
+
+.education-header .date {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.education-item .school {
+  margin-top: 6px;
+  color: #444;
+  font-size: 0.95rem;
+}
