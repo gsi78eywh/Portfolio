@@ -211,6 +211,47 @@ section p {
   }
 }
 
+/* Experience Section */
+.experience-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.experience-header h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007acc; /* highlight project name */
+  margin: 0;
+}
+
+.experience-header .date {
+  font-size: 0.9rem;
+  color: #666;
+  font-style: italic;
+}
+
+.experience-item p {
+  margin-top: 10px;
+  color: #444;
+  line-height: 1.6;
+}
+
 
 /* Skills & Certifications Tags */
 .skills-tags {

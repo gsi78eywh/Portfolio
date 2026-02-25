@@ -129,7 +129,7 @@ const Profile = () => {
       </section>
 
       {/* --- EXPERIENCE --- */}
-     <section>
+    <section>
   <h2>Experience</h2>
   <div className="experience-item">
     <div className="experience-header">
