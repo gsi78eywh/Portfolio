@@ -11,8 +11,16 @@ const skills = [
   { name: "PHP", icon: <FaPhp /> },
   { name: "MySQL", icon: <SiMysql /> },
   { name: "Java", icon: <FaJava /> },
-  { name: "Git & GitHub", icon: <FaGithub /> },
 ];
+
+const tools = [
+  { name: "GitHub", icon: <FaGithub /> },
+  { name: "Docker", icon: <FaDocker /> },
+  { name: "NPM", icon: <FaNpm /> },
+  { name: "VIM", icon: <SiVim /> },
+  { name: "Copilot", icon: <SiGithubcopilot /> },
+];
+
 
 const Profile = () => {
   return (
@@ -94,6 +102,19 @@ const Profile = () => {
           ))}
         </div>
       </section>
+
+
+<section>
+  <h2>Tools & Technologies</h2>
+  <div className="tools-tags">
+    {tools.map((tool) => (
+      <span key={tool.name} className="tag">
+        {tool.icon} {tool.name}
+      </span>
+    ))}
+  </div>
+</section>
+
 
       {/* --- CERTIFICATIONS --- */}
       <section>

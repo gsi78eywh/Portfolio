@@ -15,6 +15,37 @@
   line-height: 1.6;
 }
 
+
+/* Tools & Technologies Section */
+.tools-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.tools-tags .tag {
+  background: #fdfdfd;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  padding: 8px 14px;
+  font-size: 0.9rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.tools-tags .tag:hover {
+  background: #eef6ff;
+  border-color: #007acc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
+
 /* Header Section */
 .cv-header {
   text-align: center;
@@ -102,6 +133,7 @@ section h2 {
 }
 
 /* Section containers (card style) */
+/* Section containers */
 section {
   background: linear-gradient(135deg, #ffffff, #f9f9f9);
   padding: 30px;
@@ -116,17 +148,43 @@ section:hover {
   box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
+/* Section titles */
 section h2 {
   margin-bottom: 15px;
   font-size: 1.6rem;
-  color: #333;
-  border-bottom: 2px solid #e0e0e0;
-  padding-bottom: 8px;
+  color: #222;
+  font-weight: bold;
+  border-left: 4px solid #61dafb; /* accent highlight */
+  padding-left: 10px;
 }
 
+/* Paragraphs inside sections */
 section p {
-  line-height: 1.6;
-  color: #555;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+/* Highlight important text */
+.highlight {
+  background: #fff3cd;
+  color: #856404;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  section {
+    padding: 20px;
+  }
+  section h2 {
+    font-size: 1.3rem;
+  }
+  section p {
+    font-size: 0.95rem;
+  }
 }
 
 
@@ -134,8 +192,32 @@ section p {
 .skills-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
+  justify-content: flex-start; /* or center for symmetry */
+  margin-top: 15px;
 }
+
+.skills-tags .tag {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: all 0.2s ease;
+}
+
+.skills-tags .tag:hover {
+  background: #f0f8ff;
+  border-color: #007acc;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+}
+
 .certification-tag {
   background: #e0e0e0;
   color: #333;
