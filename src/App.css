@@ -326,3 +326,43 @@ section p {
   color: #444;
   font-size: 0.95rem;
 }
+
+/* Footer Section */
+.cv-footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+  border-top: 1px solid #e0e0e0;
+  background: #f9f9f9;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.08);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cv-footer:hover {
+  background: #eef6ff;
+  color: #333;
+}
+
+.cv-footer p {
+  margin: 8px 0;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #007acc;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+  color: #005f99;
+}

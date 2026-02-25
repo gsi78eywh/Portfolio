@@ -136,7 +136,7 @@ const Profile = () => {
 
       {/* --- EXPERIENCE --- */}
     <section>
-  <h2>Experience</h2>
+  <h2>Projects</h2>
   <div className="experience-item">
     <div className="experience-header">
       <h3>Library Management System (School Project)</h3>
@@ -171,10 +171,81 @@ const Profile = () => {
   </div>
 </section>
 
+
+
+<section>
+  <h2>Experience</h2>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Youth Empowerment Participant</h3>
+      <span className="date">2025</span>
+    </div>
+    <p>
+      Engaged in a community initiative focused on leadership and digital skills. 
+      Collaborated with peers in workshops and discussions, strengthening leadership 
+      abilities and expanding professional networks.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Tech Talk by Accenture</h3>
+      <span className="date">January 2026</span>
+    </div>
+    <p>
+      Participated in a technology seminar hosted by Accenture, gaining insights into 
+      industry trends such as AI and cloud solutions. Actively engaged in Q&A sessions 
+      and applied key takeaways to academic projects.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>AI Talk Participant</h3>
+      <span className="date">February 2026</span>
+    </div>
+    <p>
+      Attended an AI-focused seminar exploring modern applications of artificial intelligence. 
+      Interacted with speakers and studied case examples, improving understanding of AI 
+      fundamentals and identifying opportunities for integration in future projects.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Alliance Student Developer</h3>
+      <span className="date">Aug – Dec 11, 2025</span>
+    </div>
+    <p>
+      Collaborated with fellow student developers to design and build applications using 
+      low-code platforms. Contributed to shared projects, streamlined workflows, and applied 
+      rapid prototyping techniques, resulting in functional apps that demonstrated practical 
+      solutions and enhanced teamwork skills.
+    </p>
+  </div>
+</section>
+
       {/* --- FOOTER --- */}
-      <footer>
-        © 2026 Seth Andrey Jabagat • Built with React
-      </footer>
+   <footer className="cv-footer">
+  <p>📬 You can interact with me here:</p>
+  <div className="footer-links">
+    <a href="https://www.facebook.com/profile.php?id=61582551204852" target="_blank" rel="noopener noreferrer">
+      Facebook
+    </a>
+    <a href="https://instagram.com/uj2uw3.xx" target="_blank" rel="noopener noreferrer">
+      Instagram
+    </a>
+    <a href="https://www.linkedin.com/in/seth-andrey-abrasado-868419366/" target="_blank" rel="noopener noreferrer">
+      LinkedIn
+    </a>
+    <a href="mailto:sethandreyabrasad0@gmail.com">Gmail</a>
+    <a href="tel:+639277458524">📞 Call Me</a>
+  </div>
+  <p>© 2026 Seth Andrey Jabagat • Built with React</p>
+</footer>
+
+
     </div>
   );
 };
