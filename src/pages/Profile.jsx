@@ -67,7 +67,23 @@ const Profile = () => {
         </p>
       </section>
 
-      {/* --- SKILLS --- */}
+ 
+
+<section>
+        <h2>Education</h2>
+        <div className="education-item">
+          <h3>Associate in Computer Technology</h3>
+          <p className="date">2024 - 2026</p>
+          <p>University of San Jose - Recoletos</p>
+        </div>
+        <div className="education-item">
+          <h3>Senior High School</h3>
+          <p className="date">2021 - 2023</p>
+          <p>Mantalongon National High School, Dalaguete, Cebu</p>
+        </div>
+      </section>
+
+
       <section>
         <h2>Tech Stack</h2>
         <div className="skills-tags">
@@ -120,21 +136,7 @@ const Profile = () => {
         </div>
       </section>
 
-      {/* --- EDUCATION --- */}
-      <section>
-        <h2>Education</h2>
-        <div className="education-item">
-          <h3>Associate in Computer Technology</h3>
-          <p className="date">2024 - 2026</p>
-          <p>University of San Jose - Recoletos</p>
-        </div>
-        <div className="education-item">
-          <h3>Senior High School</h3>
-          <p className="date">2021 - 2023</p>
-          <p>Mantalongon National High School, Dalaguete, Cebu</p>
-        </div>
-      </section>
-
+      
       {/* --- FOOTER --- */}
       <footer>
         © 2026 Seth Andrey Jabagat • Built with React
