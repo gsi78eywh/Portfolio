@@ -103,12 +103,32 @@ section h2 {
 
 /* Section containers (card style) */
 section {
-  background: #f9f9f9;
-  padding: 20px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  background: linear-gradient(135deg, #ffffff, #f9f9f9);
+  padding: 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+section h2 {
+  margin-bottom: 15px;
+  font-size: 1.6rem;
+  color: #333;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+section p {
+  line-height: 1.6;
+  color: #555;
+}
+
 
 /* Skills & Certifications Tags */
 .skills-tags {

@@ -104,6 +104,8 @@ const Profile = () => {
           <span className="tag">Google Coursera Python Automation</span>
           <span className="tag">Google UI/UX Training Module</span>
           <span className="tag">Rapid Application Development</span>
+          <span className="tag">Web Development Fundamentals</span>
+          <span className="tag">Database Management Systems</span>
         </div>
       </section>
 
