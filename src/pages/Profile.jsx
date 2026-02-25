@@ -28,7 +28,7 @@ const Profile = () => {
       <header className="cv-header">
         <div className="header-content">
           <img
-            src="https://images7.alphacoders.com/101/1013669.jpg"
+            src="https://image2url.com/r2/default/images/1771990345724-dc3809f5-c43d-460a-a222-2c1a9d6b59c0.jpg"
             alt="Seth Andrey Jabagat"
             className="profile-photo"
           />
@@ -76,18 +76,24 @@ const Profile = () => {
 
       {/* --- EDUCATION --- */}
       <section>
-        <h2>Education</h2>
-        <div className="education-item">
-          <h3>Associate in Computer Technology</h3>
-          <p className="date">2024 - 2026</p>
-          <p>University of San Jose - Recoletos</p>
-        </div>
-        <div className="education-item">
-          <h3>Senior High School</h3>
-          <p className="date">2021 - 2023</p>
-          <p>Mantalongon National High School, Dalaguete, Cebu</p>
-        </div>
-      </section>
+  <h2>Education</h2>
+  <div className="education-item">
+    <div className="education-header">
+      <h3>Associate in Computer Technology</h3>
+      <span className="date">2024 - 2026</span>
+    </div>
+    <p className="school">University of San Jose - Recoletos</p>
+  </div>
+
+  <div className="education-item">
+    <div className="education-header">
+      <h3>Senior High School</h3>
+      <span className="date">2021 - 2023</span>
+    </div>
+    <p className="school">Mantalongon National High School, Dalaguete, Cebu</p>
+  </div>
+</section>
+
 
       {/* --- TECH STACK --- */}
       <section>
