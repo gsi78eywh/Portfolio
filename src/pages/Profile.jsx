@@ -179,7 +179,7 @@ const Profile = () => {
   <div className="experience-item">
     <div className="experience-header">
       <h3>Youth Empowerment Participant</h3>
-      <span className="date">2025</span>
+      <span className="date"> January 2025 - Present</span>
     </div>
     <p>
       Engaged in a community initiative focused on leadership and digital skills. 
@@ -242,7 +242,6 @@ const Profile = () => {
     <a href="mailto:sethandreyabrasad0@gmail.com">Gmail</a>
     <a href="tel:+639277458524">📞 Call Me</a>
   </div>
-  <p>© 2026 Seth Andrey Jabagat • Built with React</p>
 </footer>
 
 
