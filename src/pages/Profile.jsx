@@ -29,37 +29,39 @@ const Profile = () => {
     <div className="cv-container">
       {/* --- HEADER --- */}
       <header className="cv-header">
-        <div className="header-content">
-          <img
-            src="https://image2url.com/r2/default/images/1772013296101-7731ccd5-a3f8-4627-952a-5d4bda8992e7.jpg"
-            alt="Seth Andrey Jabagat"
-            className="profile-photo"
-          />
-          <div>
-            <h1>Seth Andrey Jabagat <MdVerified className="verified-icon" /></h1>
-            <p className="subtitle">Junior Frontend Developer | UI/UX Enthusiast</p>
+        <img
+          src="https://image2url.com/r2/default/images/1772013296101-7731ccd5-a3f8-4627-952a-5d4bda8992e7.jpg"
+          alt="Seth Andrey Jabagat"
+          className="profile-photo"
+        />
+        
+        <div className="header-info">
+          <div className="name-row">
+            <h1>Seth Andrey Jabagat</h1>
+            <MdVerified className="verified-icon" />
           </div>
-        </div>
+          
+          <p className="location-row">
+            <MdLocationOn /> Dalaguete, Cebu, Philippines
+          </p>
+          
+          <div className="role-row">
+            <span className="role-text">Junior Frontend Developer</span>
+            <span className="role-separator">|</span>
+            <span className="role-text">UI/UX Enthusiast</span>
+          </div>
 
-        <div className="contact-links">
-          <a href="mailto:sethandreyabrasad0@gmail.com">📧 sethandreyabrasad0@gmail.com</a>
-          <a href="https://github.com/gsi78eywh">💻 github.com/gsi78eywh</a>
-          <a href="#">📍 Dalaguete, Cebu, Philippines</a>
-        </div>
-
-        <div style={{ marginTop: "15px" }}>
-          <a
-            href="https://teams.microsoft.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="tag"
-          >
-            Schedule a Call
-          </a>
-          <a href="mailto:sethandreyabrasad0@gmail.com" className="tag">
-            Send Email
-          </a>
-          <button className="tag">Download CV</button>
+          <div className="button-group">
+            <a href="https://teams.microsoft.com" target="_blank" rel="noopener noreferrer" className="btn-action btn-dark">
+              <MdCalendarToday /> Schedule a Call
+            </a>
+            <a href="mailto:sethandreyabrasad0@gmail.com" className="btn-action btn-outline">
+              <MdEmail /> Send Email
+            </a>
+            <button className="btn-action btn-outline">
+              <MdFileDownload /> Download CV
+            </button>
+          </div>
         </div>
       </header>
 
