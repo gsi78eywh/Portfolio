@@ -1,7 +1,7 @@
 import React from "react";  
 import "../App.css";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava } from "react-icons/fa";
-import { SiMysql } from "react-icons/si";
+import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava, FaDocker, FaNpm } from "react-icons/fa";
+import { SiMysql, SiVim, SiGithubcopilot } from "react-icons/si";
 
 const skills = [
   { name: "HTML", icon: <FaHtml5 /> },
@@ -20,7 +20,6 @@ const tools = [
   { name: "VIM", icon: <SiVim /> },
   { name: "Copilot", icon: <SiGithubcopilot /> },
 ];
-
 
 const Profile = () => {
   return (
@@ -75,9 +74,8 @@ const Profile = () => {
         </p>
       </section>
 
- 
-
-<section>
+      {/* --- EDUCATION --- */}
+      <section>
         <h2>Education</h2>
         <div className="education-item">
           <h3>Associate in Computer Technology</h3>
@@ -91,7 +89,7 @@ const Profile = () => {
         </div>
       </section>
 
-
+      {/* --- TECH STACK --- */}
       <section>
         <h2>Tech Stack</h2>
         <div className="skills-tags">
@@ -103,18 +101,17 @@ const Profile = () => {
         </div>
       </section>
 
-
-<section>
-  <h2>Tools & Technologies</h2>
-  <div className="tools-tags">
-    {tools.map((tool) => (
-      <span key={tool.name} className="tag">
-        {tool.icon} {tool.name}
-      </span>
-    ))}
-  </div>
-</section>
-
+      {/* --- TOOLS --- */}
+      <section>
+        <h2>Tools & Technologies</h2>
+        <div className="tools-tags">
+          {tools.map((tool) => (
+            <span key={tool.name} className="tag">
+              {tool.icon} {tool.name}
+            </span>
+          ))}
+        </div>
+      </section>
 
       {/* --- CERTIFICATIONS --- */}
       <section>
@@ -159,7 +156,6 @@ const Profile = () => {
         </div>
       </section>
 
-      
       {/* --- FOOTER --- */}
       <footer>
         © 2026 Seth Andrey Jabagat • Built with React
