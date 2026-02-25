@@ -31,13 +31,13 @@ const Profile = () => {
       <header className="cv-header">
         <div className="header-content">
           <img
-            src="https://image2url.com/r2/default/images/1771990345724-dc3809f5-c43d-460a-a222-2c1a9d6b59c0.jpg"
+            src="https://image2url.com/r2/default/images/1772013296101-7731ccd5-a3f8-4627-952a-5d4bda8992e7.jpg"
             alt="Seth Andrey Jabagat"
             className="profile-photo"
           />
           <div>
             <h1>Seth Andrey Jabagat <MdVerified className="verified-icon" /></h1>
-            <p className="subtitle">Junior Full-Stack Developer | UI/UX Enthusiast</p>
+            <p className="subtitle">Junior Frontend Developer | UI/UX Enthusiast</p>
           </div>
         </div>
 
@@ -230,25 +230,46 @@ const Profile = () => {
 </section>
 
 <footer className="cv-footer">
-  <p>📬 You can interact with me here:</p>
-  <div className="footer-links">
-    <a href="https://www.facebook.com/profile.php?id=61582551204852" target="_blank" rel="noopener noreferrer">
-      <FaFacebook /> Facebook
-    </a>
-    <a href="https://instagram.com/uj2uw3.xx" target="_blank" rel="noopener noreferrer">
-      <FaInstagram /> Instagram
-    </a>
-    <a href="https://www.linkedin.com/in/seth-andrey-abrasado-868419366/" target="_blank" rel="noopener noreferrer">
-      <FaLinkedin /> LinkedIn
-    </a>
-    <a href="mailto:sethandreyabrasad0@gmail.com">
-      <FaEnvelope /> Gmail
-    </a>
-    <a href="tel:+639277458524">
-      <FaPhone /> Call Me
-    </a>
+  <div className="footer-container">
+    {/* Community Section */}
+    <div className="footer-section">
+      <h3>Community</h3>
+      <p>Join developer forums, contribute to open-source, and collaborate with peers to grow together.</p>
+    </div>
+
+    {/* Reach Out Section */}
+    <div className="footer-section">
+      <h3>Reach Out</h3>
+      <div className="footer-links">
+        <a href="https://www.facebook.com/profile.php?id=61582551204852" target="_blank" rel="noopener noreferrer">
+          <FaFacebook /> Facebook
+        </a>
+        <a href="https://instagram.com/uj2uw3.xx" target="_blank" rel="noopener noreferrer">
+          <FaInstagram /> Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/seth-andrey-abrasado-868419366/" target="_blank" rel="noopener noreferrer">
+          <FaLinkedin /> LinkedIn
+        </a>
+        <a href="mailto:sethandreyabrasad0@gmail.com">
+          <FaEnvelope /> Gmail
+        </a>
+        <a href="tel:+639277458524">
+          <FaPhone /> Call Me
+        </a>
+      </div>
+    </div>
+
+    {/* Motivation Section */}
+    <div className="footer-section">
+      <h3>Motivation</h3>
+      <p>“Always focus on your own lane. No one finds happiness by pursuing someone else's life path.”
+― Sylvia Salow</p>
+    </div>
   </div>
+
+  <p className="footer-bottom">© 2026 Seth Andrey Jabagat • Built with React</p>
 </footer>
+
     </div>
   );
 };

@@ -14,6 +14,12 @@
   color: #01070a;
   line-height: 1.6;
 }
+.verified-icon {
+  color: #1da1f2;        /* blue checkmark */
+  font-size: 1.4rem;     /* slightly smaller than the name text */
+  margin-left: 8px;      /* spacing between name and icon */
+  vertical-align: middle;
+}
 
 
 /* Tools & Technologies Section */
@@ -93,7 +99,7 @@
 }
 .contact-links a {
   display: inline-block;
-  margin: 5px 10px;
+  margin: 5px 5px;
   color: #007acc;
   text-decoration: none;
   font-size: 0.95rem;
@@ -114,9 +120,10 @@
 .profile-photo {
   width: 100px;
   height: 100px;
-  border-radius: 40%; /* circular photo */
+  border-radius: 50%; /* circular photo */
   object-fit: cover;
   border: 3px solid #61dafb; /* accent border */
+  order: -1; /* place photo on the left */
 }
 
 /* Call-to-action buttons */
@@ -338,52 +345,63 @@ section p {
 
 /* Footer Section */
 /* Footer Section */
+/* Footer */
 .cv-footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  font-size: 0.95rem;
-  color: #444;
-  border-top: 2px solid #e0e0e0;
-  background: #ffffff;
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 -2px 8px rgba(0,0,0,0.06);
+  margin-top: 40px;
+  padding: 20px;
+  background: #f1f1f1;
+  border-radius: 10px;
 }
 
-.cv-footer p {
-  margin: 8px 0;
-  font-weight: 500;
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap; /* responsive */
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.footer-section p {
+  font-size: 0.9rem;
+  color: #555;
 }
 
 .footer-links {
-  margin: 15px 0;
   display: flex;
-  justify-content: center;   /* centers the whole group */
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .footer-links a {
-  display: flex;              /* icon + text side by side */
-  align-items: center;        /* vertical alignment */
-  gap: 8px;                   /* space between icon and text */
   color: #007acc;
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 500;
-  padding: 6px 14px;
-  border: 1px solid #e0e0e0;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer-links a:hover {
-  background: #eef6ff;
-  border-color: #007acc;
-  color: #005f99;
+  text-decoration: underline;
 }
 
-.footer-links a svg {
-  font-size: 1.1rem;          /* slightly larger icon */
-  flex-shrink: 0;             /* prevents icon from shrinking */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
 }
