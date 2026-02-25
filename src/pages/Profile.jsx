@@ -125,7 +125,7 @@ const Profile = () => {
         <h2>Education</h2>
         <div className="education-item">
           <h3>Associate in Computer Technology</h3>
-          <p className="date">2023 - 2026</p>
+          <p className="date">2024 - 2026</p>
           <p>University of San Jose - Recoletos</p>
         </div>
         <div className="education-item">
