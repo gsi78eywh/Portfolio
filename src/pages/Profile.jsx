@@ -75,7 +75,7 @@ const Profile = () => {
       </section>
 
       {/* --- EDUCATION --- */}
-      <section>
+   <section>
   <h2>Education</h2>
   <div className="education-item">
     <div className="education-header">
