@@ -129,33 +129,41 @@ const Profile = () => {
       </section>
 
       {/* --- EXPERIENCE --- */}
-      <section>
-        <h2>Experience</h2>
-        <div className="experience-item">
-          <h3>Library Management System (School Project)</h3>
-          <p className="date">Aug 2025 - Nov 2025</p>
-          <p>
-            Developed a responsive, user-friendly online library system that improved accessibility
-            for students. 70% of users reported easier access to resources.
-          </p>
-        </div>
-        <div className="experience-item">
-          <h3>Mini E-commerce Frontend (School Project)</h3>
-          <p className="date">Sep 2025 - Nov 2025</p>
-          <p>
-            Designed a simple online shopping interface with responsive design, product browsing,
-            cart addition, and checkout functionality.
-          </p>
-        </div>
-        <div className="experience-item">
-          <h3>Kombat Console Games (School Project)</h3>
-          <p className="date">Jul 2025 - Sep 2025</p>
-          <p>
-            Developed a console-based combat game with character selection, turn-based battles, and
-            health tracking, showcasing programming fundamentals.
-          </p>
-        </div>
-      </section>
+     <section>
+  <h2>Experience</h2>
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Library Management System (School Project)</h3>
+      <span className="date">Aug 2025 - Nov 2025</span>
+    </div>
+    <p>
+      Developed a responsive, user-friendly online library system that improved accessibility
+      for students. 70% of users reported easier access to resources.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Mini E-commerce Frontend (School Project)</h3>
+      <span className="date">Sep 2025 - Nov 2025</span>
+    </div>
+    <p>
+      Designed a simple online shopping interface with responsive design, product browsing,
+      cart addition, and checkout functionality.
+    </p>
+  </div>
+
+  <div className="experience-item">
+    <div className="experience-header">
+      <h3>Kombat Console Games (School Project)</h3>
+      <span className="date">Jul 2025 - Sep 2025</span>
+    </div>
+    <p>
+      Developed a console-based combat game with character selection, turn-based battles, and
+      health tracking, showcasing programming fundamentals.
+    </p>
+  </div>
+</section>
 
       {/* --- FOOTER --- */}
       <footer>

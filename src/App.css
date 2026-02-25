@@ -49,23 +49,23 @@
 
 /* Brand-specific colors */
 .tools-tags .tag.github {
-  background: #000;
+  background:transparent;
   color: #fff;
 }
 .tools-tags .tag.docker {
-  background: #0db7ed;
+  background:transparent;
   color: #fff;
 }
 .tools-tags .tag.npm {
-  background: #cb3837;
+  background:transparent;
   color: #fff;
 }
 .tools-tags .tag.vim {
-  background: #019833;
+  background:transparent;
   color: #fff;
 }
 .tools-tags .tag.copilot {
-  background: #6c8ef5;
+  background: transparent;
   color: #fff;
 }
 
@@ -110,7 +110,7 @@
 .profile-photo {
   width: 100px;
   height: 100px;
-  border-radius: 50%; /* circular photo */
+  border-radius: 40%; /* circular photo */
   object-fit: cover;
   border: 3px solid #61dafb; /* accent border */
 }
