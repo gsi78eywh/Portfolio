@@ -82,6 +82,7 @@
   font-size: 2.5rem;
   font-weight: bold;
   margin-bottom: 10px;
+  font-family: Arial;
 }
 .subtitle {
   font-size: 1.2rem;
@@ -281,7 +282,7 @@ section p {
 
 .skills-tags .tag:hover {
   background: #f0f8ff;
-  border-color: #007acc;
+  border-color: #66b5df;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }

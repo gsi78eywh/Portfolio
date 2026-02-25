@@ -248,10 +248,7 @@ const Profile = () => {
       <FaPhone /> Call Me
     </a>
   </div>
-  <p>© 2026 Seth Andrey Jabagat • Built with React</p>
 </footer>
-
-
     </div>
   );
 };
