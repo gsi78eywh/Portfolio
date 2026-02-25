@@ -25,6 +25,14 @@
   margin-top: 15px;
 }
 
+.verified-icon {
+  color: #1da1f2; /* Professional blue */
+  font-size: 1.2rem;
+  vertical-align: middle;
+  margin-left: 6px;
+}
+
+
 /* Tools & Technologies Tags */
 .tools-tags .tag {
   background: #ffffff;
@@ -231,7 +239,7 @@ section p {
 .experience-header h3 {
   font-size: 1.2rem;
   font-weight: bold;
-  color: #007acc; /* highlight project name */
+  color: #f2eddc; /* highlight project name */
   margin: 0;
 }
 
@@ -349,17 +357,20 @@ section p {
 .footer-links {
   margin: 15px 0;
   display: flex;
-  justify-content: center;
+  justify-content: center;   /* centers the whole group */
   flex-wrap: wrap;
   gap: 15px;
 }
 
 .footer-links a {
+  display: flex;              /* icon + text side by side */
+  align-items: center;        /* vertical alignment */
+  gap: 8px;                   /* space between icon and text */
   color: #007acc;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border: 1px solid #e0e0e0;
   border-radius: 6px;
   transition: all 0.2s ease;
@@ -369,4 +380,9 @@ section p {
   background: #eef6ff;
   border-color: #007acc;
   color: #005f99;
+}
+
+.footer-links a svg {
+  font-size: 1.1rem;          /* slightly larger icon */
+  flex-shrink: 0;             /* prevents icon from shrinking */
 }

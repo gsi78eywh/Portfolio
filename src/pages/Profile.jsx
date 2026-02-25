@@ -2,6 +2,9 @@ import React from "react";
 import "../App.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava, FaDocker, FaNpm } from "react-icons/fa";
 import { SiMysql, SiVim, SiGithubcopilot } from "react-icons/si";
+import { MdVerified } from "react-icons/md";
+import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+
 
 const skills = [
   { name: "HTML", icon: <FaHtml5 /> },
@@ -33,7 +36,7 @@ const Profile = () => {
             className="profile-photo"
           />
           <div>
-            <h1>Seth Andrey Jabagat</h1>
+            <h1>Seth Andrey Jabagat <MdVerified className="verified-icon" /></h1>
             <p className="subtitle">Junior Full-Stack Developer | UI/UX Enthusiast</p>
           </div>
         </div>
@@ -226,22 +229,26 @@ const Profile = () => {
   </div>
 </section>
 
-      {/* --- FOOTER --- */}
-   <footer className="cv-footer">
+<footer className="cv-footer">
   <p>📬 You can interact with me here:</p>
   <div className="footer-links">
     <a href="https://www.facebook.com/profile.php?id=61582551204852" target="_blank" rel="noopener noreferrer">
-      Facebook
+      <FaFacebook /> Facebook
     </a>
     <a href="https://instagram.com/uj2uw3.xx" target="_blank" rel="noopener noreferrer">
-      Instagram
+      <FaInstagram /> Instagram
     </a>
     <a href="https://www.linkedin.com/in/seth-andrey-abrasado-868419366/" target="_blank" rel="noopener noreferrer">
-      LinkedIn
+      <FaLinkedin /> LinkedIn
     </a>
-    <a href="mailto:sethandreyabrasad0@gmail.com">Gmail</a>
-    <a href="tel:+639277458524">📞 Call Me</a>
+    <a href="mailto:sethandreyabrasad0@gmail.com">
+      <FaEnvelope /> Gmail
+    </a>
+    <a href="tel:+639277458524">
+      <FaPhone /> Call Me
+    </a>
   </div>
+  <p>© 2026 Seth Andrey Jabagat • Built with React</p>
 </footer>
 
 
