@@ -25,48 +25,43 @@
   margin-top: 15px;
 }
 
+/* Tools & Technologies Tags */
 .tools-tags .tag {
-  background: #fdfdfd;
-  border: 1px solid #dcdcdc;
-  border-radius: 6px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
   padding: 8px 14px;
-  font-size: 0.9rem;
-  color: #222;
+  font-size: 0.95rem;
+  color: #333;
   display: flex;
   align-items: center;
   gap: 6px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   transition: all 0.2s ease;
 }
 
-/* Hover effect */
 .tools-tags .tag:hover {
-  background: #eef6ff;
+  background: #f0f8ff;
   border-color: #007acc;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* Brand-specific colors */
+/* Brand-specific accents (optional) */
 .tools-tags .tag.github {
-  background:transparent;
-  color: #fff;
+  border-left: 4px solid #000; /* GitHub black */
 }
 .tools-tags .tag.docker {
-  background:transparent;
-  color: #fff;
+  border-left: 4px solid #0db7ed; /* Docker blue */
 }
 .tools-tags .tag.npm {
-  background:transparent;
-  color: #fff;
+  border-left: 4px solid #cb3837; /* NPM red */
 }
 .tools-tags .tag.vim {
-  background:transparent;
-  color: #fff;
+  border-left: 4px solid #019833; /* Vim green */
 }
 .tools-tags .tag.copilot {
-  background: transparent;
-  color: #fff;
+  border-left: 4px solid #6c8ef5; /* Copilot purple/blue */
 }
 
 
