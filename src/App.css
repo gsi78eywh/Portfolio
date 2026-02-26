@@ -14,13 +14,47 @@
   color: #01070a;
   line-height: 1.6;
 }
+/* Verified Icon - single definition */
 .verified-icon {
-  color: #1da1f2;        /* blue checkmark */
-  font-size: 1.4rem;     /* slightly smaller than the name text */
-  margin-left: 8px;      /* spacing between name and icon */
+  color: #1da1f2; /* Professional blue */
+  font-size: 1.3rem;
+  margin-left: 6px;
   vertical-align: middle;
 }
 
+/* Unify button styles */
+.btn-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+}
+
+.btn-dark {
+  background-color: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+.btn-outline {
+  background-color: white;
+  color: #334155;
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  opacity: 0.9;
+}
+
+/* Remove duplicate "a.tag" styles if not needed */
 
 /* Tools & Technologies Section */
 /* Tools & Technologies Section */
@@ -31,12 +65,6 @@
   margin-top: 15px;
 }
 
-.verified-icon {
-  color: #1da1f2; /* Professional blue */
-  font-size: 1.2rem;
-  vertical-align: middle;
-  margin-left: 6px; 
-}
 
 
 /* Tools & Technologies Tags */
@@ -121,10 +149,12 @@
   letter-spacing: -0.5px;
 }
 
-.verified-icon {
-  color: #3b82f6; /* Professional blue */
-  font-size: 1.6rem;
+.icon {
+  font-size: 1.2rem;
+  margin-right: 6px;
+  vertical-align: middle;
 }
+
 
 .location-row {
   display: flex;

@@ -2,9 +2,10 @@ import React from "react";
 import "../App.css";
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava, FaDocker, FaNpm } from "react-icons/fa";
 import { SiMysql, SiVim, SiGithubcopilot } from "react-icons/si";
-import { MdVerified } from "react-icons/md";
 import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
-
+import { 
+  MdVerified, MdLocationOn, MdCalendarToday, MdEmail, MdFileDownload 
+} from "react-icons/md";
 
 const skills = [
   { name: "HTML", icon: <FaHtml5 /> },
@@ -29,11 +30,13 @@ const Profile = () => {
     <div className="cv-container">
       {/* --- HEADER --- */}
       <header className="cv-header">
-        <img
-          src="https://image2url.com/r2/default/images/1772013296101-7731ccd5-a3f8-4627-952a-5d4bda8992e7.jpg"
-          alt="Seth Andrey Jabagat"
-          className="profile-photo"
-        />
+        <div className="profile-photo-wrapper">
+            <img
+            src="https://image2url.com/r2/default/images/1772013296101-7731ccd5-a3f8-4627-952a-5d4bda8992e7.jpg"
+            alt="Seth Andrey Jabagat"
+            className="profile-photo"
+            />
+        </div>
         
         <div className="header-info">
           <div className="name-row">
@@ -42,7 +45,7 @@ const Profile = () => {
           </div>
           
           <p className="location-row">
-            <MdLocationOn /> Dalaguete, Cebu, Philippines
+            <MdLocationOn className="icon" /> Dalaguete, Cebu, Philippines
           </p>
           
           <div className="role-row">
@@ -56,10 +59,10 @@ const Profile = () => {
               <MdCalendarToday /> Schedule a Call
             </a>
             <a href="mailto:sethandreyabrasad0@gmail.com" className="btn-action btn-outline">
-              <MdEmail /> Send Email
+              <MdEmail /> Email Me
             </a>
-            <button className="btn-action btn-outline">
-              <MdFileDownload /> Download CV
+            <button className="btn-action btn-brand-pink">
+              <MdFileDownload /> Resume
             </button>
           </div>
         </div>
