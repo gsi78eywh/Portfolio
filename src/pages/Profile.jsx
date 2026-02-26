@@ -1,21 +1,31 @@
-import React from "react";  
-import "../App.css";
-import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava, FaDocker, FaNpm } from "react-icons/fa";
-import { SiMysql, SiVim, SiGithubcopilot } from "react-icons/si";
-import { FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
+import React from "react";
 import { 
-  MdVerified, MdLocationOn, MdCalendarToday, MdEmail, MdFileDownload 
-} from "react-icons/md";
+  FaHtml5, FaCss3Alt, FaJs, FaReact, FaGithub, FaPhp, FaJava, FaDocker, FaNpm, FaNodeJs,
+  FaFacebook, FaInstagram, FaLinkedin, FaEnvelope, FaPhone 
+} from "react-icons/fa";
+import { SiMysql, SiVim, SiGithubcopilot, SiLaravel, SiTailwindcss } from "react-icons/si";
+import { MdVerified, MdLocationOn, MdCalendarToday, MdEmail, MdFileDownload } from "react-icons/md";
+import "../App.css";
 
-const skills = [
-  { name: "HTML", icon: <FaHtml5 /> },
-  { name: "CSS", icon: <FaCss3Alt /> },
-  { name: "JavaScript", icon: <FaJs /> },
-  { name: "React", icon: <FaReact /> },
-  { name: "PHP", icon: <FaPhp /> },
-  { name: "MySQL", icon: <SiMysql /> },
-  { name: "Java", icon: <FaJava /> },
-];
+
+const techStack = {
+  frontend: [
+    { name: "HTML", icon: <FaHtml5 />, color: "#e34c26" },
+    { name: "CSS", icon: <FaCss3Alt />, color: "#264de4" },
+    { name: "JavaScript", icon: <FaJs />, color: "#f7df1e" },
+    { name: "React", icon: <FaReact />, color: "#61dbfb" },
+    { name: "Tailwind", icon: <SiTailwindcss />, color: "#38b2ac" },
+  ],
+  backend: [
+    { name: "PHP", icon: <FaPhp />, color: "#777bb4" },
+    { name: "Laravel", icon: <SiLaravel />, color: "#ff2d20" },
+    { name: "Java", icon: <FaJava />, color: "#007396" },
+    { name: "Node.js", icon: <FaNodeJs />, color: "#68a063" },
+  ],
+  database: [
+    { name: "MySQL", icon: <SiMysql />, color: "#00758f" },
+  ]
+};
 
 const tools = [
   { name: "GitHub", icon: <FaGithub /> },
@@ -104,16 +114,35 @@ const Profile = () => {
 
 
       {/* --- TECH STACK --- */}
-      <section>
-        <h2>Tech Stack</h2>
-        <div className="skills-tags">
-          {skills.map((skill) => (
-            <span key={skill.name} className="tag">
-              {skill.icon} {skill.name}
+      <section className="cv-section">
+  <h2 className="section-title">Tech Stack</h2>
+  
+  <div className="space-y-10">
+    {Object.entries(techStack).map(([category, items]) => (
+      <div key={category} className="stack-group">
+        {/* Category Heading */}
+        <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-400 mb-4">
+          {category} Development
+        </h3>
+        
+        {/* Skills Tags */}
+        <div className="skills-tags flex flex-wrap gap-3">
+          {items.map((skill) => (
+            <span key={skill.name} className="tag group flex items-center gap-3 px-5 py-3 bg-white border border-slate-100 rounded-2xl shadow-sm hover:border-[#D83B7D] transition-all">
+              <span 
+                className="text-2xl group-hover:scale-110 transition-transform" 
+                style={{ color: skill.color }}
+              >
+                {skill.icon}
+              </span>
+              <span className="font-bold text-xs text-slate-700">{skill.name}</span>
             </span>
           ))}
         </div>
-      </section>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* --- TOOLS --- */}
      <section>
