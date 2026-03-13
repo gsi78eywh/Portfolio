@@ -1,237 +1,382 @@
-/* Root container */
+/* --------------------------------------------------------------
+   1️⃣  DESIGN TOKENS – colour, spacing, font‑size
+   -------------------------------------------------------------- */
+:root {
+  /* ==== Colours ==== */
+  --clr-primary      : #0f172a;   /* dark background for dark buttons */
+  --clr-primary-bg   : #0f172a;   /* same for dark button bg */
+  --clr-primary-fg   : #ffffff;   /* text on dark button */
+  --clr-accent       : #61dafb;   /* React‑blue accent (used on headings, borders) */
+  --clr-accent‑light : #f0f8ff;   /* subtle hover background */
+  --clr-skyblue      : #87ceeb;   /* for tags/project titles */
+  --clr-skyblue‑dark : #00bfff  ;
+  --clr-verified     : #1da1f2;   /* twitter‑blue */
+  --clr-bg‑light     : #f9f9f9;
+  --clr-bg‑card      : #ffffff;
+  --clr-border       : #e0e0e0;
+  --clr-shadow       : rgba(0,0,0,.08);
+
+  /* ==== Layout ==== */
+  --max-w-page       : 1280px;
+  --max-w-cv         : 900px;
+  --gap-base         : 0.75rem;   /* 12px */
+  --gap-lg           : 1.5rem;    /* 24px */
+  --radius-base      : 0.5rem;    /* 8px */
+  --radius-lg       : 0.75rem;    /* 12px */
+
+  /* ==== Typography ==== */
+  --ff-base          : Arial, Helvetica, sans-serif;
+  --fs-base          : 1rem;       /* 16px */
+  --fs-h1            : 2.4rem;    /* 38px */
+  --fs-h2            : 1.6rem;    /* 26px */
+  --fs-h3            : 1.2rem;    /* 19px */
+  --fs-body          : 0.95rem;   /* 15px */
+}
+
+/* --------------------------------------------------------------
+   2️⃣  GLOBAL RESET / ROOT
+   -------------------------------------------------------------- */
+html,
+body,
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* CV Container */
-.cv-container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: var(--ff-base);
+  font-size: var(--fs-base);
   color: #01070a;
-  line-height: 1.6;
-}
-/* Verified Icon - single definition */
-.verified-icon {
-  color: #1da1f2; /* Professional blue */
-  font-size: 1.3rem;
-  margin-left: 6px;
-  vertical-align: middle;
+  background: #fff;
 }
 
-/* Unify button styles */
+/* --------------------------------------------------------------
+   3️⃣  CONTAINER
+   -------------------------------------------------------------- */
+.cv-container {
+  max-width: var(--max-w-cv);
+  margin: 2rem auto;
+  padding: var(--gap-lg);
+}
+
+/* --------------------------------------------------------------
+   4️⃣  HEADINGS & TEXT
+   -------------------------------------------------------------- */
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+  color: #0f172a;
+}
+h1 {
+  font-size: var(--fs-h1);
+  font-weight: 800;
+}
+h2 {
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  border-left: 4px solid var(--clr-accent);
+  padding-left: var(--gap-base);
+  margin-bottom: var(--gap-base);
+}
+h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------
+   5️⃣  BUTTONS (single source of truth)
+   -------------------------------------------------------------- */
 .btn-action {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border-radius: 10px;
+  gap: var(--gap-base);
+  padding: 0.625rem 1.375rem;      /* 10px 22px */
+  border-radius: var(--radius-base);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: var(--fs-body);
   text-decoration: none;
-  transition: all 0.2s ease;
   cursor: pointer;
-  border: 1px solid #e2e8f0;
+  border: 1px solid var(--clr-border);
+  transition: all 0.2s ease;
+}
+.btn-action:hover,
+.btn-action:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px var(--clr-shadow);
+  opacity: 0.95;
 }
 
+/* Dark (primary) button */
 .btn-dark {
-  background-color: #0f172a;
-  color: white;
-  border-color: #0f172a;
+  background: var(--clr-primary-bg);
+  color: var(--clr-primary-fg);
+  border-color: var(--clr-primary-bg);
 }
 
+/* Outline button (email / download) */
 .btn-outline {
-  background-color: white;
+  background: #fff;
   color: #334155;
 }
 
-.btn-action:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-  opacity: 0.9;
+/* Optional pink brand button – you can keep your own class */
+.btn-brand-pink {
+  background: #ff5e99;
+  color: #fff;
+  border: none;
 }
 
-/* Remove duplicate "a.tag" styles if not needed */
-
-/* Tools & Technologies Section */
-/* Tools & Technologies Section */
-.tools-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 15px;
-}
-
-
-
-/* Tools & Technologies Tags */
-.tools-tags .tag {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  color: #333;
-  display: flex;
+/* --------------------------------------------------------------
+   6️⃣  TAGS / BADGES (generic reusable)
+   -------------------------------------------------------------- */
+.tag {
+  display: inline-flex;
   align-items: center;
-  gap: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  gap: var(--gap-base);
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-base);
+  padding: 0.5rem 1rem;
+  font-size: var(--fs-body);
+  color: #333;
   transition: all 0.2s ease;
 }
-
-.tools-tags .tag:hover {
-  background: #f0f8ff;
-  border-color: #007acc;
+.tag:hover,
+.tag:focus-visible {
+  background: var(--clr-accent-light);
+  border-color: var(--clr-accent);
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
 }
 
-/* Brand-specific accents (optional) */
-.tools-tags .tag.github {
-  border-left: 4px solid #000; /* GitHub black */
+/* Brand‑specific tag accents – keep your original colour hints */
+.tag.github   { border-left: 4px solid #000; }
+.tag.docker   { border-left: 4px solid #0db7ed; }
+.tag.npm      { border-left: 4px solid #cb3837; }
+.tag.vim      { border-left: 4px solid #019833; }
+.tag.copilot  { border-left: 4px solid #6c8ef5; }
+
+/* --------------------------------------------------------------
+   7️⃣  SECTIONS (cards)
+   -------------------------------------------------------------- */
+section {
+  background: linear-gradient(135deg, #fff, var(--clr-bg-light));
+  border-radius: var(--radius-lg);
+  box-shadow: 0 4px 12px var(--clr-shadow);
+  padding: var(--gap-lg);
+  margin-bottom: var(--gap-lg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.tools-tags .tag.docker {
-  border-left: 4px solid #0db7ed; /* Docker blue */
-}
-.tools-tags .tag.npm {
-  border-left: 4px solid #cb3837; /* NPM red */
-}
-.tools-tags .tag.vim {
-  border-left: 4px solid #019833; /* Vim green */
-}
-.tools-tags .tag.copilot {
-  border-left: 4px solid #6c8ef5; /* Copilot purple/blue */
+section:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px var(--clr-shadow);
 }
 
+/* Consistent heading inside cards */
+section > h2 {
+  margin-bottom: var(--gap-base);
+}
 
-/* Header Section */
-/* Header Section */
-/* --- HEADER SECTION --- */
+/* --------------------------------------------------------------
+   8️⃣  HEADER (photo + name)
+   -------------------------------------------------------------- */
 .cv-header {
   display: flex;
-  gap: 32px; /* Space between photo and text */
+  gap: var(--gap-lg);
   align-items: flex-start;
-  margin-bottom: 50px;
-  padding-bottom: 20px;
+  margin-bottom: var(--gap-lg);
+  padding-bottom: var(--gap-base);
+  flex-wrap: wrap;               /* allow wrap on very narrow screens */
 }
-
-/* Square profile photo from screenshot */
 .profile-photo {
   width: 150px;
   height: 150px;
-  border-radius: 16px; /* Rounded corners but square shape */
+  border-radius: 1rem;           /* 16px */
   object-fit: cover;
-  background-color: #f1f5f9;
-  border: none; /* Removed the blue circle border */
+  background: #f1f5f9;
 }
 
+/* Header text block */
 .header-info {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
+/* Name row – the animated element lives here */
 .name-row {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 4px;
+  gap: var(--gap-base);
+  margin-bottom: 0.25rem;
 }
-
 .name-row h1 {
-  font-size: 2.4rem;
-  font-weight: 800;
-  margin: 0;
   color: #0f172a;
-  letter-spacing: -0.5px;
 }
 
-.icon {
-  font-size: 1.2rem;
-  margin-right: 6px;
-  vertical-align: middle;
+/* Verified badge */
+.verified-icon {
+  color: var(--clr-verified);
+  font-size: 1.3rem;
 }
 
-
+/* Location row */
 .location-row {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: var(--gap-base);
   color: #64748b;
-  margin-bottom: 12px;
-  font-size: 1rem;
 }
 
+/* Role row */
 .role-row {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: var(--gap-base);
   font-size: 1.4rem;
   font-weight: 500;
   color: #1e293b;
 }
-
 .role-separator {
   color: #cbd5e1;
   font-weight: 300;
 }
 
-/* --- ACTION BUTTONS --- */
-.button-group {
-  display: flex;
-  gap: 12px;
-  margin-top: 24px;
+/* --------------------------------------------------------------
+   9️⃣  EXPERIENCE / PROJECT CARD
+   -------------------------------------------------------------- */
+.experience-item,
+.education-item,
+.recommendation-item {
+  background: var(--clr-bg-card);
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius-base);
+  padding: var(--gap-base);
+  box-shadow: 0 2px 6px var(--clr-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin-bottom: var(--gap-base);
 }
-
-/* Base style for all header buttons */
-.btn-action {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 10px 22px;
-  border-radius: 10px;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  transition: all 0.2s ease;
-  cursor: pointer;
-  border: 1px solid #e2e8f0;
-}
-
-/* Specific "Schedule a Call" Dark Style */
-.btn-dark {
-  background-color: #0f172a;
-  color: white;
-  border-color: #0f172a;
-}
-
-/* Specific "Email/Download" Outline Style */
-.btn-outline {
-  background-color: white;
-  color: #334155;
-}
-
-.btn-action:hover {
+.experience-item:hover,
+.education-item:hover,
+.recommendation-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  opacity: 0.9;
+  box-shadow: 0 4px 12px var(--clr-shadow);
 }
 
-/* Responsive: Stack photo and text on small screens */
+/* Header inside cards */
+.experience-header,
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.experience-header h3,
+.education-header h3 {
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  color: var(--clr-skyblue);
+  margin: 0;
+}
+.experience-header .date,
+.education-header .date {
+  font-size: 0.9rem;
+  color: var(--clr-skyblue-dark);
+}
+
+/* --------------------------------------------------------------
+   10️⃣  TOOLS & TECH STACK (flex wrap)
+   -------------------------------------------------------------- */
+.tools-tags,
+.skills-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-base);
+  margin-top: var(--gap-base);
+}
+
+/* --------------------------------------------------------------
+   11️⃣  QUOTE SECTION (Motivation)
+   -------------------------------------------------------------- */
+.quote-section {
+  margin: var(--gap-lg) 0;
+}
+.quote-box {
+  background: #f8fafc;
+  border-left: 4px solid var(--clr-accent);
+  padding: 1rem 1.5rem;
+}
+.quote-text {
+  font-style: italic;
+  font-size: 1.1rem;
+}
+.quote-author {
+  margin-top: 0.5rem;
+  text-align: right;
+  font-weight: 600;
+}
+
+/* --------------------------------------------------------------
+   12️⃣  FOOTER
+   -------------------------------------------------------------- */
+.cv-footer {
+  margin-top: var(--gap-lg);
+  padding: var(--gap-lg);
+  background: #f1f1f1;
+  border-radius: var(--radius-lg);
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-lg);
+  justify-content: space-between;
+}
+.footer-section {
+  flex: 1;
+  min-width: 220px;
+  background: #fff;
+  padding: var(--gap-base);
+  border-radius: var(--radius-base);
+  box-shadow: 0 2px 6px var(--clr-shadow);
+}
+.footer-section h3 {
+  margin-bottom: var(--gap-base);
+  font-size: 1.1rem;
+}
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-base);
+}
+.footer-links a {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-base);
+  color: #007acc;
+  text-decoration: none;
+}
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.footer-bottom {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: var(--gap-base);
+}
+
+/* --------------------------------------------------------------
+   13️⃣  RESPONSIVE BREAKPOINTS
+   -------------------------------------------------------------- */
 @media (max-width: 768px) {
   .cv-header {
     flex-direction: column;
     align-items: center;
     text-align: center;
   }
-  .name-row {
+  .name-row,
+  .role-row {
     justify-content: center;
   }
   .role-row {
-    justify-content: center;
     font-size: 1.1rem;
   }
   .button-group {
@@ -240,289 +385,31 @@
   }
 }
 
-/* Call-to-action buttons */
-a.tag {
-  display: inline-block;
-  text-align: center;
-  text-decoration: none;
+/* --------------------------------------------------------------
+   14️⃣  FOCUS OUTLINE (accessibility)
+   -------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--clr-accent);
+  outline-offset: 2px;
 }
 
-a.tag, .tag {
-  background: skyblue;        /* Light background */
-  color: white;               /* Text color */
-  padding: 12px 26px;         /* Balanced size */
-  border-radius: 8px;         /* Modern rounded corners */
-  font-size: 16px;            /* Readable text */
-  font-weight: 100;           /* Slight emphasis */
-  margin: 6px;                /* Even spacing */
-  cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
-  border: 0px solid black;  /* Simple border with color */
+/* --------------------------------------------------------------
+   15️⃣  ANIMATION FOR THE NAME (add this to the same file)
+   -------------------------------------------------------------- */
+@keyframes slideFade {
+  0%   { opacity: 0; transform: translateX(-120%) scale(0.8); }
+  55%  { opacity: 1; transform: translateX(10%) scale(1.02); }
+  80%  { transform: translateX(-4%) scale(0.98); }
+  100% { transform: translateX(0) scale(1); }
+}
+.name-animate {
+  display: inline-block;           /* needed for transform */
+  animation: slideFade 0.9s ease-out forwards;
 }
 
-a.tag:hover, .tag:hover {
-  background: #61dafb;        /* Accent hover color */
-  color: #000;                /* Dark text for contrast */
-  transform: translateY(-2px); /* Subtle lift effect */
-}
-
-
-
-/* Grid Layout */
-.cv-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
-}
-@media (max-width: 768px) {
-  .cv-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Section Titles */
-section h2 {
-  font-size: 1.4rem;
-  margin-bottom: 12px;
-  color: #222;
-  font-weight: bold;
-}
-
-/* Section containers (card style) */
-/* Section containers */
-section {
-  background: linear-gradient(135deg, #ffffff, #f9f9f9);
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-section:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-}
-
-/* Section titles */
-section h2 {
-  margin-bottom: 15px;
-  font-size: 1.6rem;
-  color: #222;
-  font-weight: bold;
-  border-left: 4px solid #61dafb; /* accent highlight */
-  padding-left: 10px;
-}
-
-/* Paragraphs inside sections */
-section p {
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 12px;
-}
-
-/* Highlight important text */
-.highlight {
-  background: #fff3cd;
-  color: #856404;
-  padding: 2px 6px;
-  border-radius: 4px;
-  font-weight: 600;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  section {
-    padding: 20px;
-  }
-  section h2 {
-    font-size: 1.3rem;
-  }
-  section p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Experience Section */
-.experience-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.experience-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.experience-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.experience-header h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: skyblue; /* highlight project name */
-  margin: 0;
-}
-
-.experience-header .date {
-  font-size: 0.9rem;
-  color:skyblue;
-  font-style: Arial;
-}
-
-.experience-item p {
-  margin-top: 10px;
-  color: #444;
-  line-height: 1.6;
-}
-
-
-/* Skills & Certifications Tags */
-.skills-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: flex-start; /* or center for symmetry */
-  margin-top: 15px;
-}
-
-.skills-tags .tag {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.95rem;
-  color: #333;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: all 0.2s ease;
-}
-
-.skills-tags .tag:hover {
-  background: #f0f8ff;
-  border-color: #66b5df;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.12);
-}
-
-.certification-tag {
-  background: #e0e0e0;
-  color: #333;
-  padding: 6px 12px;
-  border-radius: 15px;
-  font-size: 13px;
-}
-
-/* Education Section */
-.education-item {
-  margin-bottom: 20px;
-  padding: 15px;
-  background: #fff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.education-item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-}
-
-.education-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.education-header h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: #007acc; /* highlight degree/program */
-  margin: 0;
-}
-
-.education-header .date {
-  font-size: 0.9rem;
-  color: #666;
-  font-style: italic;
-}
-
-.education-item .school {
-  margin-top: 6px;
-  color: #444;
-  font-size: 0.95rem;
-}
-
-/* Footer Section */
-/* Footer Section */
-/* Footer */
-.cv-footer {
-  margin-top: 40px;
-  padding: 20px;
-  background: #f1f1f1;
-  border-radius: 10px;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap; /* responsive */
-  margin-bottom: 20px;
-}
-
-.footer-section {
-  flex: 1;
-  min-width: 220px;
-  background: #fff;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-}
-
-.footer-section h3 {
-  margin-bottom: 10px;
-  font-size: 1.1rem;
-  color: #222;
-}
-
-.footer-section p {
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-links a {
-  color: #007acc;
-  text-decoration: none;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 0.8rem;
-  color: #777;
+/* --------------------------------------------------------------
+   16️⃣  OPTIONAL – smooth scrolling for internal links
+   -------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
 }
