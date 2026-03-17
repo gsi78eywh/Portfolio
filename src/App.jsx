@@ -1,19 +1,15 @@
-import { useState } from 'react'
-import './App.css'
-import Home from './pages/Home.jsx' 
-import About from './pages/About.jsx'
-import Profile from './pages/Profile.jsx'
-
+/* src/App.jsx */
+import "./styles.css";
+import { Navbar } from "./components/Navbar";   // optional sticky nav
+import Home from "./pages/Home";
 
 function App() {
-
   return (
     <>
+      <Navbar />
       <Home />
-      <About />
-      <Profile /> 
     </>
   );
 }
 
-export default App
+export default App;
